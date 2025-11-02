@@ -2,11 +2,11 @@ const axios = require("axios");
 const simsim = "https://simsimi.cyberbot.top";
 
 module.exports.config = {
- name: "baby",
+ name: "sadia",
  version: "1.0.3",
  hasPermssion: 0,
  credits: "ULLASH",
- description: "Cute AI Baby Chatbot | Talk, Teach & Chat with Emotion ☢️",
+ description: "Cute AI sadia Chatbot | Talk, Teach & Chat with Emotion ☢️",
  commandCategory: "simsim",
  usages: "[message/query]",
  cooldowns: 0,
@@ -21,7 +21,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
  const query = rawQuery.toLowerCase(); 
 
  if (!query) {
- const ran = ["Bolo baby", "hum"];
+ const ran = ["Bolo ", "hum"];
  const r = ran[Math.floor(Math.random() * ran.length)];
  return api.sendMessage(r, event.threadID, (err, info) => {
  if (!err) {
@@ -118,7 +118,7 @@ module.exports.run = async function ({ api, event, args, Users }) {
  }
  } catch (err) {
  console.error(err);
- return api.sendMessage(`| Error in baby command: ${err.message}`, event.threadID, event.messageID);
+ return api.sendMessage(`| Error in sadia command: ${err.message}`, event.threadID, event.messageID);
  }
 };
 
@@ -161,7 +161,7 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
  const senderID = event.senderID;
 
  if (
- raw === "baby" || raw === "bot" || raw === "bby" ||
+ raw === "sadia" || raw === "bot" || raw === "bby" ||
  raw === "jan" || raw === "xan" || raw === "জান" || raw === "বট" || raw === "বেবি" 
  ) {
  const greetings = [
@@ -289,12 +289,12 @@ module.exports.handleEvent = async function ({ api, event, Users }) {
  }
 
  if (
- raw.startsWith("baby ") || raw.startsWith("bot ") || raw.startsWith("bby ") ||
+ raw.startsWith("sadia ") || raw.startsWith("bot ") || raw.startsWith("bby ") ||
  raw.startsWith("jan ") || raw.startsWith("xan ") ||
  raw.startsWith("জান ") || raw.startsWith("বট ") || raw.startsWith("বেবি ")
  ) {
  const query = raw
- .replace(/^baby\s+|^bot\s+|^bby\s+|^jan\s+|^xan\s+|^জান\s+|^বট\s+|^বেবি\s+/i, "")
+ .replace(/^sadia\s+|^bot\s+|^bby\s+|^jan\s+|^xan\s+|^জান\s+|^বট\s+|^বেবি\s+/i, "")
  .trim();
  if (!query) return;
 
