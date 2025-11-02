@@ -35,8 +35,8 @@ module.exports.run = async function ({ api, event }) {
 `;
 
   const images = [
-    "",
-    ""
+    "https://i.postimg.cc/wBvr25F0/555432050-797689599514107-1244040132088454248-n.jpg",
+    "https://i.postimg.cc/wBvr25F0/555432050-797689599514107-1244040132088454248-n.jpg"
   ];
 
   const randomImg = images[Math.floor(Math.random() * images.length)];
