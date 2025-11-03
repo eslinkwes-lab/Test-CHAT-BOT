@@ -7,22 +7,24 @@ const {spawn} = require(_0x374ef(0xc5)+_0x374ef(0x7b)),
       path = require(_0x374ef(0x74)),
       app = express();
 
-// === Render-এর জন্য PORT ঠিক করা হয়েছে! ===
+// === Render-এর জন্য PORT ===
 const PORT = process.env.PORT || 3000;
 
-// === হেলথ চেক রুট (UptimeRobot-এর জন্য) ===
+// === UptimeRobot + Render-এর জন্য হেলথ চেক রুট ===
 app.get('/', (req, res) => {
-  res.send('<h1>Bot is alive! 🚀</h1><p>SHAHADAT CHAT BOT is running on Render!</p>');
+  res.status(200).send(`
+    <h1 style="text-align:center; color:#6e48aa; font-family:Arial;">SHAHADAT BOT IS ALIVE! 🚀</h1>
+    <p style="text-align:center;">URL: <a href="https://test-chat-bot-xhf0.onrender.com">https://test-chat-bot-xhf0.onrender.com</a></p>
+    <p style="text-align:center; color:green;">UptimeRobot: <strong>OK</strong></p>
+  `);
 });
 
-// === ইন্ডেক্স HTML সার্ভ করা (আগের মতোই) ===
-app.get('/', function(_0x53dc08,_0x29d53f){
-  const _0x518376=_0x374ef,
-        _0x16ffed={'jLrfF':_0x518376(0xb3)+'l'};
-  _0x29d53f[_0x518376(0xd4)](path[_0x518376(0x81)](__dirname,_0x16ffed[_0x518376(0xd5)]));
+// === index.html সার্ভ করা (যদি ফাইল থাকে) ===
+app.get('/index.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// === সার্ভার চালু (Render-এর জন্য) ===
+// === সার্ভার চালু করা ===
 app.listen(PORT, () => {
   const _0x147a6d = _0x374ef;
   const _0x12c386 = {
@@ -30,6 +32,7 @@ app.listen(PORT, () => {
     'AFZvL': _0x147a6d(0x97)+'\x20]'
   };
   _0x12c386[_0x147a6d(0x98)](logger, _0x147a6d(0xcb)+_0x147a6d(0x8b)+_0x147a6d(0xc6)+PORT+_0x147a6d(0xd3), _0x12c386[_0x147a6d(0xaa)]);
+  console.log(`Visit: https://test-chat-bot-xhf0.onrender.com`);
 })['on'](_0x374ef(0x69), _0x5f4b66 => {
   const _0x109240 = _0x374ef;
   const _0x33f8fc = {
